@@ -1,0 +1,32 @@
+{
+    "manifestVersion": 1,
+    "id": "generate-env-task",
+    "name": "Generate .env Task",
+    "version": "1.0.0",
+    "publisher": "tu-publisher",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "Task to generate a .env file based on a Variable Group",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "images/icon.png"
+    },
+    "files": [],
+    "contributions": [
+        {
+            "id": "generate-env-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "src/task"
+            }
+        }
+    ]
+}
