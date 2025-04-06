@@ -1,9 +1,12 @@
 {
-  "name": "src",
+  "name": "sonarcloud-create-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "testdev": "jest --watch",
+    "coverage": "jest --coverage",
+    "build": "tsc -p tsconfig.build.json; cp -r task.json icon.png node_modules ../dist"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,7 @@
     "azure-pipelines-task-lib": "^4.17.3"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.6",
     "@types/q": "^1.5.8",
