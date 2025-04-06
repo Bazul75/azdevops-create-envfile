@@ -1,9 +1,9 @@
 {
     "manifestVersion": 1,
-    "id": "generate-env-task",
-    "name": "Generate .env Task",
-    "version": "1.0.0",
-    "publisher": "tu-publisher",
+    "id": "create-envfile",
+    "name": "Generate .env File",
+    "version": "1.0.6",
+    "publisher": "Bazul",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -11,12 +11,16 @@
     ],
     "description": "Task to generate a .env file based on a Variable Group",
     "categories": [
-        "Build and release"
+        "Azure Pipelines"
     ],
     "icons": {
         "default": "images/icon.png"
     },
-    "files": [],
+    "files": [
+        {
+            "path": "dist"
+        }
+    ],
     "contributions": [
         {
             "id": "generate-env-task",
@@ -25,7 +29,7 @@
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "src/task"
+                "name": "dist"
             }
         }
     ]
