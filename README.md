@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Main branch initialized
-=======
 # 🚀 Generate a `.env` File from an Azure DevOps Variable Group
 
 Easily automate the creation of a `.env` file from an Azure DevOps Variable Group with this custom Azure Pipelines task.
@@ -78,4 +75,5 @@ The task executes the following steps:
 - For more information, refer to the [Azure DevOps documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups).
 
 ---
->>>>>>> c5b8c6a (Add README to document the creation of a .env file from Azure DevOps Variable Groups)
+
+> > > > > > > c5b8c6a (Add README to document the creation of a .env file from Azure DevOps Variable Groups)
