@@ -35,19 +35,19 @@ Then, add the task to your YAML pipeline as follows:
 
 Suppose you have a Variable Group named `prueba-env-file` with the following variables:
 
-![Variable Group](./images/vgroup.png)
+![Variable Group](https://i.imgur.com/xZTHWX7.png)
 
 We will use the next YAML pipeline to reference this variable group and create envfile
 
-![Pipeline](./images/pipeline.png)
+![Pipeline](https://i.imgur.com/eKaVATi.png)
 
 After running the pipeline, if you try to print the variables in the Azure Pipeline execution environment, the variables will appear like this:
 
-![view pipeline variables](./images/execute.png)
+![view pipeline variables](https://i.imgur.com/mdgNRp0.png)
 
 Instead, the `.env` file will display all the values exactly as shown in the following image:
 
-![view pipeline variables](./images/env.png)
+![view pipeline variables](https://i.imgur.com/UT12ZB1.png)
 
 ---
 
