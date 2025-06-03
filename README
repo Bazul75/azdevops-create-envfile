@@ -1,0 +1,75 @@
+# 🚀 Generate a `.env` File from an Azure DevOps Variable Group
+
+Easily automate the creation of a `.env` file from an Azure DevOps Variable Group with this custom Azure Pipelines task.
+
+---
+
+## 📚 Overview
+
+This custom task simplifies the management of environment variables by generating a standard .env file directly from your Azure DevOps Variable Groups, ensuring consistency and reducing manual errors.
+
+---
+
+## ⚙️ How It Works
+
+The task executes the following steps:
+
+1. **Reads Inputs**: Accepts the Variable Group name and the desired output path for the `.env` file.
+2. **Authenticates**: Uses the system OAuth token to securely access the Azure DevOps REST API.
+3. **Fetches Variable Group**: Retrieves the specified Variable Group and its variables.
+4. **Generates `.env` File**: Writes the variables to a `.env` file in the specified location.
+5. **Reports Outcome**: Marks the task as succeeded or failed based on the operation result.
+
+---
+
+## 🚀 Usage in Azure Pipelines
+
+Add the task to your YAML pipeline as follows:
+
+```yaml
+- task: create-env-file@1
+  inputs:
+    variableGroupName: "YOUR_VARIABLE_GROUP_NAME"
+    outputPath: ".env"
+```
+
+**Parameters:**
+
+- `variableGroupName` (**Required**): Name of the Variable Group to export.
+- `outputPath` (**Required**): Path where the `.env` file will be created.
+
+---
+
+## ✅ Requirements
+
+- The pipeline must have **"Allow scripts to access the OAuth token"** enabled.
+- The Variable Group must be linked to the pipeline and contain the required variables.
+
+---
+
+## 📦 Example Variable Group
+
+Suppose you have a Variable Group named `MyEnvVars` with the following variables:
+
+| Name    | Value     |
+| ------- | --------- |
+| API_KEY | abc123    |
+| DB_HOST | localhost |
+
+The generated `.env` file will look like:
+
+```env
+API_KEY="abc123"
+DB_HOST="localhost"
+```
+
+---
+
+## 📝 Notes
+
+- **Secret variables** are included in the generated `.env`.
+- Ensure the Variable Group does not expose confidential information if the `.env` file will be publicly accessible.
+- Only plain text variables are supported.
+- For more information, refer to the [Azure DevOps documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups).
+
+---

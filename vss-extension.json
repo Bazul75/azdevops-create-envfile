@@ -1,9 +1,6 @@
 {
     "manifestVersion": 1,
-    "id": "create-envfile",
     "name": "Generate .env File",
-    "version": "1.0.6",
-    "publisher": "Bazul",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -12,6 +9,23 @@
     "description": "Task to generate a .env file based on a Variable Group",
     "categories": [
         "Azure Pipelines"
+    ],
+    "content": {
+        "details": {
+            "path": "README"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "tags": [
+        ".env",
+        "variable-group",
+        "environment"
+    ],
+    "scopes": [
+        "vso.build",
+        "vso.release"
     ],
     "icons": {
         "default": "images/icon.png"

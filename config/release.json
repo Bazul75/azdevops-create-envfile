@@ -1,6 +1,6 @@
 {
-    "id": "create-envfile",
-    "public": false,
+    "id": "create-env-file",
+    "public": true,
     "publisher": "Bazul",
-    "version": "1.0.6"
+    "version": "1.0.0"
 }
