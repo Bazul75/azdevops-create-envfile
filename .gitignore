@@ -1,0 +1,7 @@
+node_modules
+.taskkey
+.env
+dist
+coverage
+Bazul.create-envfile*
+**/.DS_Store

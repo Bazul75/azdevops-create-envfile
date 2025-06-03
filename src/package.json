@@ -1,0 +1,25 @@
+{
+  "name": "create-env-file",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "testdev": "jest --watch",
+    "coverage": "jest --coverage",
+    "build": "tsc -p tsconfig.build.json; cp -r task.json icon.png node_modules ../dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.6",
+    "@types/q": "^1.5.8",
+    "sync-request": "^6.1.0"
+  }
+}

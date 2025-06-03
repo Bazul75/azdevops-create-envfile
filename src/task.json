@@ -1,0 +1,38 @@
+{
+    "id": "e668ce49-9049-4613-a6a5-f66179fbc9cd",
+    "name": "create-env-file",
+    "friendlyName": "Create .env file",
+    "description": "Creates a .env file based on a Variable Group in Azure DevOps.",
+    "helpMarkDown": "Use this task to generate a .env file.",
+    "category": "Utility",
+    "author": "Jose Daniel Baena",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 6
+    },
+    "instanceNameFormat": "Create .env file",
+    "inputs": [
+        {
+            "name": "variableGroupName",
+            "type": "string",
+            "label": "Variable Group Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Enter the name of the Variable Group."
+        },
+        {
+            "name": "outputPath",
+            "type": "string",
+            "label": "Output Path",
+            "defaultValue": ".env",
+            "required": true,
+            "helpMarkDown": "Path to save the generated .env file."
+        }
+    ],
+    "execution": {
+        "Node20_1": {
+            "target": "index.js"
+        }
+    }
+}

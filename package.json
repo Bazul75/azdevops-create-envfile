@@ -1,0 +1,21 @@
+{
+    "name": "create-env-file",
+    "version": "1.0.0",
+    "description": "A task to create an .env file based on a variable group in Azure DevOps. This extension simplifies the process of generating environment files for your projects.",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "azde-scripts install src",
+        "build": "azde-scripts build src",
+        "pack": "azde-scripts build src && azde-scripts package src && tfx extension create --manifest-globs vss-extension.json --overrides-file config/release.json",
+        "packupversion": "azde-scripts build src && azde-scripts package src && tfx extension create --manifest-globs vss-extension.json --rev-version --overrides-file config/release.json",
+        "pack:dev": "azde-scripts build src && azde-scripts package src && tfx extension create --manifest-globs vss-extension.json --overrides-file config/dev.json",
+        "packupversion:dev": "azde-scripts build src && azde-scripts package src && tfx extension create --manifest-globs vss-extension.json --rev-version --overrides-file config/dev.json"
+    },
+    "devDependencies": {
+        "azde-scripts": "^1.0.0",
+        "tfx-cli": "^0.14.0",
+        "typescript": "^5.8.3"
+    },
+    "author": "",
+    "license": "ISC"
+}

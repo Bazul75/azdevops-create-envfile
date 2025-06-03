@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "types": ["jest"],
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "target": "ES6",
+    "removeComments": true,
+    "rootDir": "./",
+    "outDir": "../dist"
+  },
+  "exclude": ["node_modules"]
+}
