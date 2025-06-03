@@ -1,6 +1,6 @@
 {
     "id": "e668ce49-9049-4613-a6a5-f66179fbc9cd",
-    "name": "create-envfile",
+    "name": "create-env-file",
     "friendlyName": "Create .env file",
     "description": "Creates a .env file based on a Variable Group in Azure DevOps.",
     "helpMarkDown": "Use this task to generate a .env file.",

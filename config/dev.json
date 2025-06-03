@@ -1,6 +1,6 @@
 {
-    "id": "hendamm-sonarcloud-create-project",
+    "id": "create-env-file",
     "public": false,
-    "publisher": "dev-hendamm",
-    "version": "0.0.2"
+    "publisher": "Bazul",
+    "version": "1.0.0"
 }
