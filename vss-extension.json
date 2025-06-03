@@ -12,7 +12,7 @@
     ],
     "content": {
         "details": {
-            "path": "README"
+            "path": "README.md"
         },
         "license": {
             "path": "LICENSE"
