@@ -32,27 +32,19 @@ Then, add the task to your YAML pipeline as follows:
 
 Suppose you have a Variable Group named `prueba-env-file` with the following variables:
 
-![Variable Group](https://imgur.com/xZTHWX7)
-
-![Imgur](https://imgur.com/xZTHWX7)
+![Variable Group](https://i.imgur.com/xZTHWX7.png)
 
 We will use the next YAML pipeline to reference this variable group and create envfile
 
-The generated `.env` file will look like:
+![Pipeline](https://i.imgur.com/eKaVATi.png)
 
-```env
-API_KEY="abc123"
-DB_HOST="localhost"
-```
+After running the pipeline, if you try to print the variables in the Azure Pipeline execution environment, the variables will appear like this:
 
----
+![view pipeline variables](https://i.imgur.com/mdgNRp0.png)
 
-**Parameters:**
+Instead, the `.env` file will display all the values exactly as shown in the following image:
 
-- `variableGroupName` (**Required**): Name of the Variable Group to export.
-- `outputPath` (**Required**): Path where the `.env` file will be created.
-
-This extension is designed to create the `.env` file including both regular and **secret** values from the Variable Group, making environment variable management in your pipelines easier.
+![env file](https://i.imgur.com/UT12ZB1.png)
 
 ---
 
