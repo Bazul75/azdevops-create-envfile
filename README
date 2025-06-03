@@ -6,7 +6,53 @@ Easily automate the creation of a `.env` file from an Azure DevOps Variable Grou
 
 ## 📚 Overview
 
-This custom task simplifies the management of environment variables by generating a standard .env file directly from your Azure DevOps Variable Groups, ensuring consistency and reducing manual errors.
+This custom task simplifies the management of environment variables by generating a standard `.env` file directly from your Azure DevOps Variable Groups, ensuring consistency and reducing manual errors. Both regular and secret variables defined in the Variable Group will be included in the generated `.env` file.
+
+---
+
+## 🚀 Usage in Azure Pipelines
+
+Make sure the Variable Group is **imported** in your YAML using the `variables` instruction before running this task. For example:
+
+```yaml
+variables:
+  - group: "YOUR_VARIABLE_GROUP_NAME"
+```
+
+Then, add the task to your YAML pipeline as follows:
+
+```yaml
+- task: create-env-file@1
+  inputs:
+    variableGroupName: "YOUR_VARIABLE_GROUP_NAME"
+    outputPath: ".env"
+```
+
+## 📦 Example Variable Group
+
+Suppose you have a Variable Group named `prueba-env-file` with the following variables:
+
+![Variable Group](https://imgur.com/xZTHWX7)
+
+![Imgur](https://imgur.com/xZTHWX7)
+
+We will use the next YAML pipeline to reference this variable group and create envfile
+
+The generated `.env` file will look like:
+
+```env
+API_KEY="abc123"
+DB_HOST="localhost"
+```
+
+---
+
+**Parameters:**
+
+- `variableGroupName` (**Required**): Name of the Variable Group to export.
+- `outputPath` (**Required**): Path where the `.env` file will be created.
+
+This extension is designed to create the `.env` file including both regular and **secret** values from the Variable Group, making environment variable management in your pipelines easier.
 
 ---
 
@@ -22,46 +68,10 @@ The task executes the following steps:
 
 ---
 
-## 🚀 Usage in Azure Pipelines
-
-Add the task to your YAML pipeline as follows:
-
-```yaml
-- task: create-env-file@1
-  inputs:
-    variableGroupName: "YOUR_VARIABLE_GROUP_NAME"
-    outputPath: ".env"
-```
-
-**Parameters:**
-
-- `variableGroupName` (**Required**): Name of the Variable Group to export.
-- `outputPath` (**Required**): Path where the `.env` file will be created.
-
----
-
 ## ✅ Requirements
 
 - The pipeline must have **"Allow scripts to access the OAuth token"** enabled.
 - The Variable Group must be linked to the pipeline and contain the required variables.
-
----
-
-## 📦 Example Variable Group
-
-Suppose you have a Variable Group named `MyEnvVars` with the following variables:
-
-| Name    | Value     |
-| ------- | --------- |
-| API_KEY | abc123    |
-| DB_HOST | localhost |
-
-The generated `.env` file will look like:
-
-```env
-API_KEY="abc123"
-DB_HOST="localhost"
-```
 
 ---
 
